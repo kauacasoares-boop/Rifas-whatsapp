@@ -1,15 +1,88 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="3;url=https://wa.me/17996158793">
-  <title>Contato para compras</title>
+  <title>Atendimento para compras</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: #f3f7f4;
+      color: #173b2a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(100%, 420px);
+      text-align: center;
+      background: white;
+      padding: 32px 24px;
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.08);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 12px;
+    }
+
+    p {
+      line-height: 1.5;
+      color: #52645a;
+      margin: 0 0 22px;
+    }
+
+    .loader {
+      width: 34px;
+      height: 34px;
+      margin: 0 auto 20px;
+      border: 4px solid #d9e8de;
+      border-top-color: #16834b;
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: #16834b;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .loader { animation: none; }
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; padding: 50px 15px; background: #f0f7f2; color: #183b29;">
-  <h1>Atendimento para compras</h1>
-  <p>Você será encaminhado ao nosso WhatsApp em 3 segundos.</p>
-  <p><a href="https://wa.me/17996158793">Falar no WhatsApp</a></p>
+<body>
+  <main>
+    <div class="icon" aria-hidden="true">💬</div>
+    <h1>Atendimento para compras!</h1>
+    <p>Estamos te direcionando para o nosso WhatsApp de atendimento.</p>
+    <div class="loader" aria-hidden="true"></div>
+    <p>Você será encaminhado em alguns segundos. Se não acontecer automaticamente, toque no botão abaixo.</p>
+    <a href="https://wa.me/17996158793">Falar no WhatsApp</a>
+  </main>
 </body>
 </html>
+
